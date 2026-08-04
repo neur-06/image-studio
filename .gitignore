@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dist-electron/
+chat-tool/
+保存图片/
+*.log
+.DS_Store

@@ -1,0 +1,30 @@
+{
+  "name": "pinaic-image-studio",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"wait-on http://127.0.0.1:5173 && electron . --dev\"",
+    "build": "tsc -p tsconfig.json && vite build && tsc -p tsconfig.electron.json",
+    "start": "electron .",
+    "package:win": "npm run build && electron-builder --win --dir",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.electron.json --noEmit"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "keytar": "^7.9.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "concurrently": "^9.1.2",
+    "electron": "^32.2.7",
+    "electron-builder": "^25.1.8",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.5",
+    "wait-on": "^8.0.1"
+  }
+}
