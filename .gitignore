@@ -6,3 +6,5 @@ chat-tool/
 保存图片/
 *.log
 .DS_Store
+# 本地工具，不提交
+Open-Opencode.exe
